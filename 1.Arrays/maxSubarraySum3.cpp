@@ -1,4 +1,5 @@
 #include<iostream>
+#include<limits>
 using namespace std;
 
 // Kadane's Algorithm
@@ -12,7 +13,7 @@ int main (){
         cin >> a[i];
     }
     
-    int maxSum = 0;
+    int maxSum = INT_MIN;
     int currSum = 0;
     int start=0,end=0,s=0;
 
@@ -20,11 +21,6 @@ int main (){
     for (int i = 0; i < n; i++)
     {
         currSum = currSum+a[i];
-        if (currSum<0)      
-        {
-            currSum = 0;
-            s = i + 1;
-        }
 
         if (maxSum<currSum)
         {
@@ -32,6 +28,13 @@ int main (){
             start=s;
             end=i;
         }
+
+        if (currSum<0)      
+        {
+            currSum = 0;
+            s = i + 1;
+        }
+
         
         // maxSum = max(currSum,maxSum);
     }
