@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//* Difference between cin,get() and getline() - http://discuss.codingblocks.com/t/cin-get-vs-cin-getline/15147 
 
 void read_para(char a[],int maxLen,char deLim = '\n'){
     int i=0;

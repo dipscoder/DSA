@@ -5,7 +5,7 @@ int main() {
     // Initialization
     char a[] = {'h','e','y','a'};
     char b[10] = {'h','e','y','a'};
-    char c[10] = {'h','e','y','a','\0'};    //Recommended to null character(\0) at the end of the character array, Otherwise it can print some garbage value
+    char c[10] = {'h','e','y','a','\0'};    //Recommended: To add null character(\0) at the end of the character array, Otherwise it can print some garbage value
     int i[10] = {1,2,3};
 
     // Output - no need of loops
