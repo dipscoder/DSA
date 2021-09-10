@@ -1,54 +1,19 @@
 package com.dipesh;
-//https://leetcode.com/problems/search-in-rotated-sorted-array/
-public class FindInRotatedArray {
+//https://www.geeksforgeeks.org/find-rotation-count-rotated-sorted-array/
+public class RotationCount {
     public static void main(String[] args) {
         int[] a = {4,5,6,7,0,1,2};
-        int[] b = {3,5,1};
-        int target = 3;
-        int[] c = {4,5,6,7,0,0,1,4,6};
-        System.out.println(search(b,target));
-        System.out.println(c[findPivotWithDuplicates(c)]);
-//        System.out.println(search(c,6));
+        int[] d = {4,4,5,5,7,7,8,2,3,3,4};
+        System.out.println(countTheRotations(a));
+        System.out.println(findPivotWithDuplicates(d) + 1);
     }
 
-    static int search(int[] nums, int target){
-//        Find pivotIndex
-        int pivotIndex = findPivot(nums);
-//        int pivotIndexWithDuplicates = findPivotWithDuplicates(nums);
-
-        // if you did not find a pivotIndex, it means the array is not rotated
-        if (pivotIndex == -1) {
-            // just do normal binary search
-            return binarySearch(nums, target, 0 , nums.length - 1);
-        }
-        if(nums[pivotIndex] == target){
-            return pivotIndex;
-        }
-        if(target >= nums[0]){
-            return binarySearch(nums,target,0,pivotIndex-1);
-        }
-
-        return binarySearch(nums, target, pivotIndex + 1, nums.length - 1);
-
+    private static int countTheRotations(int[] a) {
+        int pivot = findPivot(a);
+        return pivot + 1;
     }
 
-
-    static int binarySearch(int[] arr, int target,int start,int end){
-
-        while(start <= end){
-//            int mid = (int) Math.floor( (double) ((start+end)/2));
-//          Better way to find middle
-//            int a = 5/2; => gives 2
-            int mid = start + (end-start) / 2;
-
-            if(arr[mid] == target) return mid;
-            else if(arr[mid] > target) end = mid - 1;
-            else start = mid + 1;
-        }
-        return -1;
-    }
-
-//  will not work if array consist of duplicate items
+    //  will not work if array consist of duplicate items
     static int findPivot(int[] arr){
         int start = 0;
         int end = arr.length-1;
@@ -115,6 +80,5 @@ public class FindInRotatedArray {
         }
         return -1;
     }
-
 
 }
