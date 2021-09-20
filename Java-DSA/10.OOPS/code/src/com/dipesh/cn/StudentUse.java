@@ -11,18 +11,30 @@ public class StudentUse {
         System.out.println(s1);
 
 //      Default Values
-        System.out.println(s1.name+" "+s1.roll_no);
+//        System.out.println(s1.name+" "+s1.roll_no);
 
         s1.name = "Dipesh";
         s2.name = "Wini";
-        s1.roll_no = 8;
-        s2.roll_no = 36;
-        System.out.println(s1.name+" "+s1.roll_no);
-        System.out.println(s2.name+" "+s2.roll_no);
+//        s1.roll_no = 8;
+//        s2.roll_no = 36;
+//        System.out.println(s1.name+" "+s1.roll_no);
+//        System.out.println(s2.name+" "+s2.roll_no);
 
+//      Setter usecase;
+        s1.setRoll_no(8);
+        s2.setRoll_no(36);
+
+//      Getter usecase
+        System.out.println(s1.name+" "+s1.getRoll_no());
+        System.out.println(s2.name+" "+s2.getRoll_no());
+
+//      "this" usecase
         Student s3;
 //        System.out.println(s3); // Not initialized error
         s3 = new Student();
-        System.out.println(s3);
+        s3.setRoll_noWithThis(44);
+        System.out.println("s3 contains = "+s3);
+        System.out.println("s3 rollno = "+ s3.getRoll_no());
+
     }
 }
