@@ -36,5 +36,8 @@ public class StudentUse {
         System.out.println("s3 contains = "+s3);
         System.out.println("s3 rollno = "+ s3.getRoll_no());
 
+//      Final Keyword Usecase
+//        s1.conversionRate = 0.5; //error
+        System.out.println(s1.conversionRate); // can read but cannot write
     }
 }

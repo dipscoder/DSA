@@ -4,6 +4,11 @@ public class Student {
     String name;
     public String username;
     private int roll_no;
+    int cgpa;
+//    Final variable can be initialized only once and cannot be modified further.
+//    We can initialize final variable inside constructor.
+//    Final keyword is a non-access modifier.
+    final double conversionRate = 0.95;
 
 //    Getter
     public int getRoll_no(){
