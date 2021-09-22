@@ -14,7 +14,9 @@ public class Student {
 //    These are the variables that belongs to a class but can be accessed by objects also
 //    UseCase - Lets say we have number of student then it is beneficial to create this variable once
 //    Instead of creating for every objects
-    static int numOfStudents;
+
+//    Also, it is good to make this variable private, so no one can change its value outside the class
+    private static int numOfStudents;
 
 //  Convention to declare final static variable is ALL CAPITAL
     final static double CONVERSIONFACTOR = 0.95;
@@ -23,6 +25,17 @@ public class Student {
     public Student(){
         numOfStudents++;
         this.roll_no = numOfStudents;
+    }
+
+//    Getter to read number of students - Better to make function static, so we can access it with class
+//    Keep in Mind- 1. Static functions cannot use non-static variables.
+//    2. Static function cannot call non-static function.
+//    3. this or super keyword cannot be used inside a static function.
+    public static int getNumStudent(){
+//        getRoll_no(); // error
+//        roll_no = 10 // error
+//        System.out.print(this.name); // error
+        return numOfStudents;
     }
 
 

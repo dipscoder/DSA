@@ -5,15 +5,15 @@ public class StudentUse {
 
 //      As Static variable belongs to Class
 //      We can access Static variable before creation of any object and can access with Class instead of object
-        System.out.println("Initial value of static variable="+Student.numOfStudents);
+        System.out.println("Initial value of static variable="+Student.getNumStudent());
 
         Student s1 = new Student();
         Student s2 = new Student();
 
-        System.out.println(s1.numOfStudents);
-        System.out.println(s2.numOfStudents);
+        System.out.println(s1.getNumStudent());
+//        System.out.println(s2.numOfStudents);
         // Better way to access static variables is by class
-        System.out.println("Value of static variable="+Student.numOfStudents);
+        System.out.println("Value of static variable="+Student.getNumStudent());
 
         //s1 is just a reference which points to the object
         //s1 stored in stack and objects are stored in heap
