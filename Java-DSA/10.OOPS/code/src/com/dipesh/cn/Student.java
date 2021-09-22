@@ -10,6 +10,22 @@ public class Student {
 //    Final keyword is a non-access modifier.
     final double conversionRate = 0.95;
 
+//    Static Variables
+//    These are the variables that belongs to a class but can be accessed by objects also
+//    UseCase - Lets say we have number of student then it is beneficial to create this variable once
+//    Instead of creating for every objects
+    static int numOfStudents;
+
+//  Convention to declare final static variable is ALL CAPITAL
+    final static double CONVERSIONFACTOR = 0.95;
+
+//  Setting up rollNumber as the number of student increases
+    public Student(){
+        numOfStudents++;
+        this.roll_no = numOfStudents;
+    }
+
+
 //    Getter
     public int getRoll_no(){
         return roll_no;

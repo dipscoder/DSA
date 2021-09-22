@@ -2,8 +2,18 @@ package com.dipesh.cn;
 
 public class StudentUse {
     public static void main(String[] args) {
+
+//      As Static variable belongs to Class
+//      We can access Static variable before creation of any object and can access with Class instead of object
+        System.out.println("Initial value of static variable="+Student.numOfStudents);
+
         Student s1 = new Student();
         Student s2 = new Student();
+
+        System.out.println(s1.numOfStudents);
+        System.out.println(s2.numOfStudents);
+        // Better way to access static variables is by class
+        System.out.println("Value of static variable="+Student.numOfStudents);
 
         //s1 is just a reference which points to the object
         //s1 stored in stack and objects are stored in heap
@@ -11,7 +21,7 @@ public class StudentUse {
         System.out.println(s1);
 
 //      Default Values
-//        System.out.println(s1.name+" "+s1.roll_no);
+//        System.out.println(s1.name+" "+s1.roll_no); // null 0
 
         s1.name = "Dipesh";
         s2.name = "Wini";
