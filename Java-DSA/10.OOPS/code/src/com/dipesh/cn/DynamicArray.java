@@ -1,5 +1,5 @@
 package com.dipesh.cn;
-
+// Custom Dynamic Array
 public class DynamicArray {
     private int[] a;
     private int nextElementIndex;

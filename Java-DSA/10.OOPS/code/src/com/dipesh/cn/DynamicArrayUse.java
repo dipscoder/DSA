@@ -1,5 +1,5 @@
 package com.dipesh.cn;
-
+// Custom Dynamic Array
 import java.util.Arrays;
 
 public class DynamicArrayUse {
