@@ -2,7 +2,19 @@ package com.dipesh.cn.oops2.inheritance;
 
 public class Car extends Vehicle{
     int noOfDoor;
-    int maxSpeed;
+//    int maxSpeed;
+
+//  This default will implicitly will call the parent default constructor(vehicle's)
+    Car(int noOfDoor, int maxSpeed){
+//      If there is no default then we need to call constructor explicitly
+//      This super will call the parent constructor but - Call to 'super()' must be first statement in constructor body
+        super(maxSpeed);
+        System.out.println("Car's Constructor");
+//        super(100); // error
+        this.noOfDoor = noOfDoor;
+    }
+
+
 //    Overrides method in Vehicle
     public void print(){
 //      It will call the print method of parent class

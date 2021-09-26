@@ -7,6 +7,13 @@ public class Vehicle {
 //  Private variables are inherited but cannot be accessed
     private int vehicleNumber;
 
+    public Vehicle(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+        System.out.println("Vehicle's Constructor");
+    }
+
+
+
     public void print(){
         System.out.println("Vehicle "+"Color: "+color+" Max Speed: "+maxSpeed );
     }
