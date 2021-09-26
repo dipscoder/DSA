@@ -23,6 +23,9 @@ public class ExceptionDemo {
         } catch (Exception e){
 //          Handle any other exceptions
             System.out.println("Generic Exception occurred: "+e);
+        } finally {
+//          finally block always execute, whether exception occurred or not
+            System.out.println("Finally Block");
         }
         System.out.println("From Main");
     }
