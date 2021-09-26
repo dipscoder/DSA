@@ -23,6 +23,15 @@ public class VehicleUse {
 //      1. All the properties are checked at complied time, so we cannot access specific(child's) properties through parent reference
 //      2. The method call is checked at runtime and if parent and child class both have the same function then only the child function is called.
 
+        Vehicle c = new Car(4,150);
+//        c = new Bicycle();  // Problem with casting - Bicycle cannot be cast to class
+        Car c1 = (Car) c;   // This is class casting
+
+//      Also, Java Object is Parent class of all classes in Java
+//      So, we can do something like this,
+        Object o = new Vehicle(100);  // By doing this, it gives access to lots of more methods and properties
+
+
     }
 
 
