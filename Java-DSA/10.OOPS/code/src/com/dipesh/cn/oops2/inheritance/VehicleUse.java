@@ -5,19 +5,21 @@ public class VehicleUse {
         Vehicle v = new Vehicle();
         v.color = "Red";
         v.maxSpeed = 100;
-        v.print();
+//        v.print();
 
         Car c = new Car();
         c.color = "blue";
         c.maxSpeed = 90;
         c.noOfDoor = 4;
         c.set(1);
+        c.printMaxSpeed();
         c.print();
-        c.printCar();
+//        c.printCar();
+
         Bicycle b =  new Bicycle();
         b.color = "black";
         b.maxSpeed = 10;
-        b.print();
+//        b.print();
     }
 
 
