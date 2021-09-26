@@ -1,4 +1,4 @@
-package com.dipesh.cn.oops2;
+package com.dipesh.cn.oops2.inheritance;
 
 public class VehicleUse {
     public static void main(String[] args) {

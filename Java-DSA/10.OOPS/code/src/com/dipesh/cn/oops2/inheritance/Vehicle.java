@@ -1,8 +1,9 @@
-package com.dipesh.cn.oops2;
+package com.dipesh.cn.oops2.inheritance;
 
 public class Vehicle {
     String color;
-    int maxSpeed;
+//  Protected modifier are accessible in same class, package and in derived/child class in different package
+    protected int maxSpeed;
 //  Private variables are inherited but cannot be accessed
     private int vehicleNumber;
 
